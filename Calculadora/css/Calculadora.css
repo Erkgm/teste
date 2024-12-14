@@ -1,0 +1,163 @@
+/* Estilo principal do corpo, configurações básicas de fonte, alinhamento e fundo */
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: url('../img/Calculadora.jpeg') no-repeat center center/cover;
+}
+
+/* Container principal da calculadora */
+.calculadora {
+  background: #2b2b2b;
+  border-radius: 20px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+  width: 320px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+/* Estilo para os botões extras no topo */
+.extra-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+/* Botões pequenos para funcionalidades extras, como parênteses e porcentagem */
+.mini-btn {
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #4b4b4b, #2e2e2e);
+  color: #fff;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Efeito ao passar o mouse nos botões pequenos */
+.mini-btn:hover {
+  background: linear-gradient(135deg, #6c6c6c, #3e3e3e);
+  transform: scale(1.1);
+}
+
+.display {
+  /* Estilo do visor da calculadora */
+  background: linear-gradient(135deg, #3e3e3e, #232323);
+  color: #00ff99;
+  text-align: right; /* Alinha os números à direita */
+  padding: 20px;
+  font-size: 2rem; /* Tamanho grande para os números */
+  border-radius: 10px; /* Bordas arredondadas */
+  margin-bottom: 20px;
+  /* Efeito de profundidade para parecer uma tela embutida */
+  box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.3);
+  height: 60px;
+  display: flex;
+  align-items: center; /* Alinha os números verticalmente no centro */
+  justify-content: flex-end; /* Alinha os números horizontalmente à direita */
+}
+
+.button {
+  /* Contêiner dos botões da calculadora */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Quatro colunas com tamanhos iguais */
+  gap: 10px; /* Espaçamento entre os botões */
+}
+
+.btn {
+  /* Botões principais da calculadora */
+  padding: 20px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  /* Gradiente de fundo para aparência elegante */
+  background: linear-gradient(135deg, #4b4b4b, #2e2e2e);
+  color: #fff;
+  /* Sombra para destaque */
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out; /* Animação suave para efeitos */
+}
+
+.btn:hover {
+  /* Efeito ao passar o mouse nos botões */
+  background: linear-gradient(135deg, #6c6c6c, #3e3e3e);
+  transform: scale(1.05); /* Leve aumento no tamanho */
+}
+
+.clear {
+  /* Botão para limpar a tela */
+  grid-column: span 2; /* Ocupa duas colunas na grade */
+  background: linear-gradient(135deg, #ff4d4d, #e60000); /* Vermelho para destacar */
+  color: white;
+}
+
+.clear:hover {
+  background: linear-gradient(135deg, #ff6666, #ff1a1a);
+}
+
+.delete {
+  /* Botão para apagar o último número ou operação */
+  background: linear-gradient(135deg, #ffcc00, #e6b800); /* Amarelo para destaque */
+  color: white;
+}
+
+.delete:hover {
+  background: linear-gradient(135deg, #ffd633, #e6c300);
+}
+
+.operator {
+  /* Botões de operações (+, -, *, /) */
+  background: linear-gradient(135deg, #ff8c00, #ff6600); /* Laranja para diferenciação */
+}
+
+.operator:hover {
+  background: linear-gradient(135deg, #ffa033, #ff7514);
+  color: #000;
+}
+
+.equal {
+  /* Botão de igualdade */
+  grid-column: span 2; /* Ocupa duas colunas na grade */
+  background: linear-gradient(135deg, #00ff99, #008000); /* Verde para chamar atenção */
+  color: white;
+}
+
+.equal:hover {
+  background: linear-gradient(135deg, #00cc88, #006600);
+}
+
+.btn:active {
+  /* Efeito ao clicar nos botões */
+  transform: scale(0.95); /* Reduz levemente o tamanho */
+  box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra interna */
+}
+
+@media (max-width: 400px) {
+  .calculadora {
+    /* Adaptação para dispositivos móveis */
+    width: 90%; /* Calculadora ocupa quase toda a largura */
+  }
+
+  .btn {
+    /* Ajusta tamanho dos botões em telas menores */
+    padding: 15px;
+    font-size: 1.2em;
+  }
+
+  .mini-btn {
+    /* Ajuste para botões extras em telas menores */
+    font-size: 0.8rem;
+    padding: 3px 7px;
+  }
+
+  .display {
+    /* Reduz o tamanho do texto no visor para dispositivos móveis */
+    font-size: 1.8rem;
+  }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora</title>
+  <!-- Link para o arquivo CSS que define os estilos da calculadora -->
+  <link rel="stylesheet" href="css/Calculadora.css">
+</head>
+
+<body>
+<div class="calculadora">
+  <!-- Botões extras da calculadora para funcionalidades adicionais -->
+  <div class="extra-buttons">
+    <!-- Esses botões ainda não têm funcionalidades implementadas -->
+    <button class="mini-btn" onclick="showNotWorkingAlert()"> (</button>
+    <button class="mini-btn" onclick="showNotWorkingAlert()"> )</button>
+    <button class="mini-btn" onclick="showNotWorkingAlert()"> %</button>
+    <button class="mini-btn" onclick="showNotWorkingAlert()"> √</button>
+  </div>
+
+  <!-- Display da calculadora onde os valores e operações são mostrados -->
+  <div class="display" id="display"></div>
+
+  <!-- Botões principais da calculadora -->
+  <div class="button">
+    <!-- Botão para limpar o display -->
+    <button class="btn clear" onclick="clearDisplay()">Apagar</button>
+    <!-- Botão para deletar o último caractere do display -->
+    <button class="btn delete" onclick="deletaUltimo()">⌫</button>
+    <!-- Botões para operadores matemáticos -->
+    <button class="btn operator" onclick="appendValue('+')">+</button>
+
+    <!-- Botões numéricos para entrada de valores -->
+    <button class="btn" onclick="appendValue('1')">1</button>
+    <button class="btn" onclick="appendValue('2')">2</button>
+    <button class="btn" onclick="appendValue('3')">3</button>
+    <button class="btn operator" onclick="appendValue('-')">−</button>
+
+    <button class="btn" onclick="appendValue('4')">4</button>
+    <button class="btn" onclick="appendValue('5')">5</button>
+    <button class="btn" onclick="appendValue('6')">6</button>
+    <button class="btn operator" onclick="appendValue('*')">×</button>
+
+    <button class="btn" onclick="appendValue('7')">7</button>
+    <button class="btn" onclick="appendValue('8')">8</button>
+    <button class="btn" onclick="appendValue('9')">9</button>
+    <button class="btn operator" onclick="appendValue('/')">÷</button>
+
+    <!-- Botões para ponto decimal e zero -->
+    <button class="btn" onclick="appendValue('.')">.</button>
+    <button class="btn" onclick="appendValue('0')">0</button>
+
+    <!-- Botão para calcular a expressão exibida no display -->
+    <button class="btn equal" onclick="calculate()">=</button>
+  </div>
+</div>
+<!-- Inclusão do arquivo JavaScript com as funcionalidades da calculadora -->
+<script src="js/Calculadora.js"></script>
+</body>
+</html>
